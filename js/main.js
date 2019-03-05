@@ -13,7 +13,7 @@ let bodyCompress = function () {
             content.style.marginLeft = "12%";
             content.style.width = "88%";
             content.style.transition = "margin 0.5s ease-in-out, width 0.5s ease-in-out";
-            headerBg.style.backgroundSize = "84rem 100%"
+            headerBg.style.backgroundSize = "84rem 100%";
 
             openBody = true;
         }
@@ -82,6 +82,4 @@ let toggleMenu = function () {
 
             toggleContactMenu = false;
         }
-
-
 }

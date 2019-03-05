@@ -70,6 +70,7 @@
   top: 0;
   left: 0;
   padding: 0.1rem;
+  z-index: 500;
   background: white;
   border-radius: 0.2rem; }
 
@@ -98,27 +99,190 @@
 .head {
   text-align: center;
   padding-top: 16rem;
-  color: white; }
+  color: white;
+  position: relative; }
   .head .main-heading {
     margin: auto;
     font-size: 1.4rem;
     letter-spacing: 0.2rem; }
-  .head .main-title {
-    font-family: "Poiret One";
-    font-size: 5rem;
-    padding-bottom: 1rem;
-    letter-spacing: 0.3rem;
-    margin: auto;
-    position: relative; }
+  .head h1 {
+    position: relative;
+    width: 46rem;
+    height: 7rem;
+    margin: auto; }
+    .head h1 span {
+      font-family: "Poiret One";
+      font-size: 5rem;
+      padding-bottom: 1rem;
+      letter-spacing: 0.3rem;
+      margin: auto;
+      position: absolute;
+      opacity: 0; }
+    .head h1 .letter-1 {
+      left: 0;
+      animation: slide-1 1s ease forwards;
+      bottom: 0; }
+    .head h1 .letter-2 {
+      left: 7%;
+      animation: slide-2 1s ease 1 0.2s forwards; }
+    .head h1 .letter-3 {
+      left: 14%;
+      animation: slide-3 1s ease 1 0.4s forwards; }
+    .head h1 .letter-4 {
+      left: 19%;
+      animation: slide-4 1s ease 1 0.6s forwards; }
+    .head h1 .letter-5 {
+      left: 23%;
+      animation: slide-5 1s ease 1 0.8s forwards; }
+    .head h1 .letter-6 {
+      left: 27%;
+      animation: slide-6 1s ease 1 1s forwards; }
+    .head h1 .letter-7 {
+      left: 38%;
+      animation: slide-7 1s ease 1 1.2s forwards; }
+    .head h1 .letter-8 {
+      left: 48%;
+      animation: slide-8 1s ease 1 1.4s forwards; }
+    .head h1 .letter-9 {
+      left: 54%;
+      animation: slide-9 1s ease 1 1.6s forwards; }
+    .head h1 .letter-10 {
+      left: 61%;
+      animation: slide-10 1s ease 1 1.8s forwards; }
+    .head h1 .letter-11 {
+      left: 65%;
+      animation: slide-11 1s ease 1 2s forwards; }
+    .head h1 .letter-12 {
+      left: 73%;
+      animation: slide-12 1s ease 1 2.2s forwards; }
+    .head h1 .letter-13 {
+      left: 80%;
+      animation: slide-13 1s ease 1 2.4s forwards; }
+    .head h1 .letter-14 {
+      left: 84%;
+      animation: slide-14 1s ease 1 2.6s forwards; }
+    .head h1 .letter-15 {
+      left: 91%;
+      animation: slide-15 1s ease 1 2.8s forwards; }
 
+@keyframes slide-1 {
+  from {
+    left: -7%;
+    opacity: 0;
+    transform: rotateZ(0deg); }
+  to {
+    left: 0;
+    opacity: 1;
+    transform: rotate(360deg); } }
+@keyframes slide-2 {
+  from {
+    bottom: 6rem;
+    opacity: 0; }
+  to {
+    bottom: 0;
+    opacity: 1; } }
+@keyframes slide-3 {
+  from {
+    top: 6rem;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }
+@keyframes slide-4 {
+  from {
+    bottom: 6rem;
+    opacity: 0; }
+  to {
+    bottom: 0;
+    opacity: 1; } }
+@keyframes slide-5 {
+  from {
+    top: 6rem;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }
+@keyframes slide-6 {
+  from {
+    bottom: 6rem;
+    opacity: 0; }
+  to {
+    bottom: 0;
+    opacity: 1; } }
+@keyframes slide-7 {
+  from {
+    top: 6rem;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }
+@keyframes slide-8 {
+  from {
+    bottom: 6rem;
+    opacity: 0; }
+  to {
+    bottom: 0;
+    opacity: 1; } }
+@keyframes slide-9 {
+  from {
+    top: 6rem;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }
+@keyframes slide-10 {
+  from {
+    bottom: 6rem;
+    opacity: 0; }
+  to {
+    bottom: 0;
+    opacity: 1; } }
+@keyframes slide-11 {
+  from {
+    top: 6rem;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }
+@keyframes slide-12 {
+  from {
+    bottom: 6rem;
+    opacity: 0; }
+  to {
+    bottom: 0;
+    opacity: 1; } }
+@keyframes slide-13 {
+  from {
+    top: 6rem;
+    opacity: 0; }
+  to {
+    top: 0;
+    opacity: 1; } }
+@keyframes slide-14 {
+  from {
+    bottom: 6rem;
+    opacity: 0; }
+  to {
+    bottom: 0;
+    opacity: 1; } }
+@keyframes slide-15 {
+  from {
+    right: -4rem;
+    opacity: 0;
+    transform: rotateZ(0deg); }
+  to {
+    right: 0;
+    opacity: 1;
+    transform: rotateZ(-360deg); } }
 .holder {
   position: absolute;
   width: 12rem;
   height: 12rem;
   border-radius: 50%;
   transition: all .5s ease-in-out;
-  right: 4rem;
-  top: 10rem; }
+  left: 50%;
+  top: 60%;
+  transform: translateX(-50%); }
 
 .main-button {
   font-family: "Dosis";
@@ -317,7 +481,7 @@ header {
   background-size: 100% 100%; }
 
 footer {
-  background: #424242;
+  background: linear-gradient(to right, black, #434343);
   text-align: center;
   height: 6rem; }
   footer p {
@@ -327,7 +491,8 @@ footer {
     font-size: 1.2rem; }
 
 .about {
-  margin: 0 2rem;
+  margin: auto;
+  width: 84%;
   display: grid;
   height: 100vh;
   grid-template-columns: 20% 80%;
@@ -336,19 +501,22 @@ footer {
 .image {
   grid-area: image;
   height: 20rem;
-  margin-top: 2rem;
+  margin-top: 10rem;
   padding-right: 1rem;
   width: 14rem; }
 
 .intro {
   grid-area: intro;
+  margin-top: 10rem;
   height: 20rem;
-  padding: 6rem 1rem 1rem 2rem; }
+  padding: 0 4rem 1rem 4rem; }
 
 #edu {
   font-family: "Dosis";
   letter-spacing: 0.1rem;
   color: #727272;
+  margin: 2rem auto;
+  width: 94%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "title title" "card-1 card-2"; }
@@ -361,7 +529,8 @@ footer {
   grid-area: card-1; }
 
 .card-2 {
-  grid-area: card-2; }
+  grid-area: card-2;
+  border-left: 1px dotted #2f2f2f; }
 
 .projects {
   display: grid;

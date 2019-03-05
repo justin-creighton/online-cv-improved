@@ -82,6 +82,7 @@
     top: 0;
     left: 0;
     padding: 0.1rem;
+    z-index: 500;
     background: rgb(255, 255, 255);
     border-radius: 0.2rem;
 }
@@ -118,6 +119,7 @@
     text-align: center;
     padding-top: 16rem;
     color: $headings-color;
+    position: relative;
 
     .main-heading {
         margin: auto;
@@ -125,15 +127,183 @@
         letter-spacing: 0.2rem;
     }
 
-    .main-title {
-        font-family: "Poiret One";
-        font-size: 5rem;
-        padding-bottom: 1rem;
-        letter-spacing: 0.3rem;
-        margin: auto;
+    h1 {
         position: relative;
+        width: 46rem;
+        height: 7rem;
+        margin: auto;
+
+        span {
+            font-family: "Poiret One";
+            font-size: 5rem;
+            padding-bottom: 1rem;
+            letter-spacing: 0.3rem;
+            margin: auto;
+            position: absolute;
+            opacity: 0;
+        }
+
+        .letter-1 {
+            left: 0;
+            animation: slide-1 1s ease forwards;
+            bottom: 0;
+        }
+
+        .letter-2 {
+            left: 7%;
+            animation: slide-2 1s ease 1 0.2s forwards;
+        }
+
+        .letter-3 {
+            left: 14%;
+            animation: slide-3 1s ease 1 0.4s forwards;
+        }
+
+        .letter-4 {
+            left: 19%;
+            animation: slide-4 1s ease 1 0.6s forwards;
+        }
+
+        .letter-5 {
+            left: 23%;
+            animation: slide-5 1s ease 1 0.8s forwards;
+        }
+
+        .letter-6 {
+            left: 27%;
+            animation: slide-6 1s ease 1 1s forwards;
+        }
+
+        .letter-7 {
+            left: 38%;
+            animation: slide-7 1s ease 1 1.2s forwards;
+        }
+
+        .letter-8 {
+            left: 48%;
+            animation: slide-8 1s ease 1 1.4s forwards;
+        }
+
+        .letter-9 {
+            left: 54%;
+            animation: slide-9 1s ease 1 1.6s forwards;
+        }
+
+        .letter-10 {
+            left: 61%;
+            animation: slide-10 1s ease 1 1.8s forwards;
+        }
+
+        .letter-11 {
+            left: 65%;
+            animation: slide-11 1s ease 1 2s forwards;
+        }
+
+        .letter-12 {
+            left: 73%;
+            animation: slide-12 1s ease 1 2.2s forwards;
+        }
+
+        .letter-13 {
+            left: 80%;
+            animation: slide-13 1s ease 1 2.4s forwards;
+        }
+
+        .letter-14 {
+            left: 84%;
+            animation: slide-14 1s ease 1 2.6s forwards;
+        }
+
+        .letter-15 {
+            left: 91%;
+            animation: slide-15 1s ease 1 2.8s forwards;
+        }
     }
 }
+
+@keyframes slide-1 {
+    from {left: -7%;
+          opacity: 0;
+          transform: rotateZ(0deg);}
+    to   {left: 0;
+          opacity: 1;
+          transform: rotate(360deg);}
+}
+
+@keyframes slide-2 {
+    from {bottom: 6rem;opacity: 0;}
+    to   {bottom: 0;opacity: 1;}
+}
+
+@keyframes slide-3 {
+    from {top: 6rem;opacity: 0;}
+    to   {top: 0;opacity: 1;}
+}
+
+@keyframes slide-4 {
+    from {bottom: 6rem;opacity: 0;}
+    to   {bottom: 0;opacity: 1;}
+}
+
+@keyframes slide-5 {
+    from {top: 6rem;opacity: 0;}
+    to   {top: 0;opacity: 1;}
+}
+
+@keyframes slide-6 {
+    from {bottom: 6rem;opacity: 0;}
+    to   {bottom: 0;opacity: 1;}
+}
+
+@keyframes slide-7 {
+    from {top: 6rem;opacity: 0;}
+    to   {top: 0;opacity: 1;}
+}
+
+@keyframes slide-8 {
+    from {bottom: 6rem;opacity: 0;}
+    to   {bottom: 0;opacity: 1;}
+}
+
+@keyframes slide-9 {
+    from {top: 6rem;opacity: 0;}
+    to   {top: 0;opacity: 1;}
+}
+
+@keyframes slide-10 {
+    from {bottom: 6rem;opacity: 0;}
+    to   {bottom: 0;opacity: 1;}
+}
+
+@keyframes slide-11 {
+    from {top: 6rem;opacity: 0;}
+    to   {top: 0;opacity: 1;}
+}
+
+@keyframes slide-12 {
+    from {bottom: 6rem;opacity: 0;}
+    to   {bottom: 0;opacity: 1;}
+}
+
+@keyframes slide-13 {
+    from {top: 6rem;opacity: 0;}
+    to   {top: 0;opacity: 1;}
+}
+
+@keyframes slide-14 {
+    from {bottom: 6rem;opacity: 0;}
+    to   {bottom: 0;opacity: 1;}
+}
+
+@keyframes slide-15 {
+    from {right: -4rem;
+          opacity: 0;
+          transform: rotateZ(0deg)}
+    to   {right: 0;
+          opacity: 1;
+          transform: rotateZ(-360deg)}
+}
+
 
 // THIS IS THE STYLES FOR THE CONTACT INFORMATION
 .holder {
@@ -142,8 +312,9 @@
     height: 12rem;
     border-radius: 50%;
     transition: all .5s ease-in-out;
-    right: 4rem;
-    top: 10rem;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%);
 }
 
 .main-button {

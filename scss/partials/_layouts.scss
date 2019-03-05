@@ -1,6 +1,7 @@
 // THIS IS THE STYLES FOR THE ABOUT SECTION
 .about {
-    margin: 0 2rem;
+    margin: auto;
+    width: 84%;
     display: grid;
     height: 100vh;
     grid-template-columns: 20% 80%;
@@ -11,15 +12,16 @@
 .image {
     grid-area: image;
     height: 20rem;
-    margin-top: 2rem;
+    margin-top: 10rem;
     padding-right: 1rem;
     width: 14rem;
 }
 
 .intro {
     grid-area: intro;
+    margin-top: 10rem;
     height: 20rem;
-    padding: 6rem 1rem 1rem 2rem;
+    padding: 0 4rem 1rem 4rem;
 }
 
 // THIS IS THE STYLE FOR THE EDUCATION SECTION
@@ -27,6 +29,8 @@
     font-family: "Dosis";
     letter-spacing: 0.1rem;
     color: $text-color;
+    margin: 2rem auto;
+    width: 94%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
@@ -45,6 +49,7 @@
 
 .card-2 {
     grid-area: card-2;
+    border-left: 1px dotted rgb(47, 47, 47);
 }
 
 // THIS IS THE STYLES FOR THE PORTFOLIO SECTION
