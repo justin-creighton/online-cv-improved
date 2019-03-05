@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- TOGGLE NAVBAR -->
+    <nav id="navbar">
+        <ul>
+            <span onclick="sidebar(), bodyCompress()">X</span>
+            <li><a href="#home" onclick="sidebar(), bodyCompress()">Home</a></li>
+            <li><a href="#about" onclick="sidebar(), bodyCompress()">About</a></li>
+            <li><a href="#edu" onclick="sidebar(), bodyCompress()">Education</a></li>
+            <li><a href="#portfolio" onclick="sidebar(), bodyCompress()">Portfolio</a></li>
+            <li><a href="#contact" onclick="sidebar(), bodyCompress()">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- WEBSITE WRAPPER -->
+    <div class="wrapper">
+
+        <!-- THIS IS THE HEADER -->
+        <header id="home">
+            <!-- MENU TOGGLE BUTTON -->
+            <div id="menu-toggle-btn" onclick="sidebar(), bodyCompress()">
+                <p></p>
+                <p></p>
+                <p></p>
+                <span>MENU</span>
+            </div>
+            <div class="head">
+                <h1 class="main-title">Justin Creighton</h1>
+                <h2 class="main-heading">Junior Web Developer</h2>
+            </div>
+
+            <!-- THIS IS THE CONTACT INFORATION -->
+            <div class="box">
+                <div class="holder" onclick="toggleMenu()">
+                    <span class="phone"><i class="fas fa-phone"></i></span>
+                    <span class="email"><i class="fab fa-google"></i></span>
+                    <span class="portfolio"><i class="far fa-folder-open"></i></span>
+                    <span class="about-me"><i class="fas fa-info"></i></span>
+                    <div class="main-button">
+                        <p><i class="fas fa-ellipsis-h"></i></p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- THIS IS THE INTRO -->
+        <section id="about" class="about">
+            <div class="image">
+                <img src="images/IMG_20160312_142624_edit.jpg" alt="">
+            </div>
+            <div class="intro">
+                <h3>Who Am I ?</h3>
+                <p>I am a hardworking individual who likes challenges, because I believe it allows us to discover new things and reach greater heights. </p>
+                <p>I enjoy working within a team, especially a diverse one, because it allows you to come up with ideas quicker and we get ideas from differt persecptives.</p>
+            </div>
+        </section>
+
+        <div class="parralax-1"></div>
+
+        
+        <!-- EDUCATIONAL INFORMATION -->
+        <div id="edu">
+            <div class="title">
+                <h1>Educational Information</h1>
+            </div> 
+            <div class="card-1">
+                <h2>Secondary Education</h2>
+                <img src="images/princeton.jpg" alt="">
+                <h3>School</h3>
+                <p>Matriculated 2015: Princeton Secondary High School-Western Cape/Mitchells'Plain-National Senior Certificate</p>
+                <h3>Subjects</h3>
+                <ul>
+                    <li>Afrikaans HL</li>
+                    <li>English FAL</li>
+                    <li>Maths</li>
+                    <li>Life Orientation</li>
+                    <li>Physical Science</li>
+                    <li>Civil Technology</li>
+                    <li>Engineering Graphics and Design</li>
+                </ul>
+            </div>
+            <div class="card-2">
+                <h2>Tertiary Education</h2>
+                <img src="images/Logo-Life-Choices.jpg" alt="">
+                <h3>Institution</h3>
+                <p>Completed : Salelesians Life Choices/Lansdowne-Full Stack Web Developer Certificate</p>
+                <h3>Duration</h3>
+                <p>1 Year (6 months Training and 6 months Internship)</p>
+                <h3>Skills</h3>
+                <p>Professional development, Life Skiils</p>
+                <span>Languages</span>
+            </div>
+        </div>
+
+        <div class="parralax-2"></div>
+
+        <article id="portfolio" class="projects">
+            <h1>Portfolio</h1>
+            <div class="box">
+                <div class="imgBox">
+                    <img src="images/apology.jpg" alt="">
+                </div>
+                <div class="details">
+                    <div class="content">
+                        <h2>Apology Letter</h2>
+                        <p>This is one of my first projects that I recieved in the second week of the course</p>
+                        <button>Preview</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBox">
+                    <img src="images/tech_trends.jpg" alt="">
+                </div>
+                <div class="details">
+                    <div class="content">
+                        <h2>Tech Trends</h2>
+                        <p>This project was done in the early stages of the course</p>
+                        <button>Preview</button>
+                    </div>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imgBox">
+                    <img src="images/project.JPG" alt="">
+                </div>
+                <div class="details">
+                    <div class="content">
+                        <h2>Outdoor Adventures</h2>
+                        <p>This project was done half way through the course.</p>
+                        <button>Preview</button>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <footer>
+            <p>&copy;Justin Creighton SCD</p>
+        </footer>
+
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

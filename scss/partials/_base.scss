@@ -1,0 +1,43 @@
+@font-face {
+    font-family: "Poiret One";
+    src: url(../fonts/PoiretOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Dosis";
+    src: url(../fonts/Dosis-Regular.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+header {
+    height: 100vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.95)), url(../images/american-cellphone-coffee-1391371.jpg);
+    background-size: 100% 100%;
+}
+
+footer {
+    background: rgb(66, 66, 66);
+    text-align: center;
+    height: 6rem;
+
+    p {
+        margin: 0;
+        padding: 2rem 0;
+        font-family: "Dosis";
+        font-size: 1.2rem;
+    }
+}
