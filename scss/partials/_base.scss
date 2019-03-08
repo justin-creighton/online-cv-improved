@@ -25,12 +25,13 @@ body {
 
 header {
     height: 100vh;
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.95)), url(../images/american-cellphone-coffee-1391371.jpg);
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(../images/american-cellphone-coffee-1391371.jpg);
     background-size: 100% 100%;
+    position: relative;
 }
 
 footer {
-    background: linear-gradient(to right, rgb(0, 0, 0), rgb(67, 67, 67));
+    background: rgb(0, 0, 0);
     text-align: center;
     height: 6rem;
 
@@ -39,5 +40,6 @@ footer {
         padding: 2rem 0;
         font-family: "Dosis";
         font-size: 1.2rem;
+        color: rgb(255, 255, 255)
     }
 }

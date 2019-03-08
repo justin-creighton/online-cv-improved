@@ -35,7 +35,7 @@ let toggleContactMenu = false;
 
 let toggleMenu = function () {
     
-    let buttonSwitch = document.querySelector(".main-button");
+    let buttonSwitch = document.querySelector(".main-button-toggle");
         cellNumber = document.querySelector(".phone");
         email = document.querySelector(".email");
         aboutMe = document.querySelector(".about-me");
@@ -43,9 +43,9 @@ let toggleMenu = function () {
 
         if (toggleContactMenu === false) {
 
-            buttonSwitch.style.width = "14rem";
-            buttonSwitch.style.height = "14rem";
-            buttonSwitch.style.background = "rgba(255, 0, 0, 0)";
+            buttonSwitch.style.width = "12rem";
+            buttonSwitch.style.height = "12rem";
+            buttonSwitch.style.background = "rgba(255, 0, 0, 0.3)";
 
             cellNumber.style.top = "0";
             cellNumber.style.opacity = "1";

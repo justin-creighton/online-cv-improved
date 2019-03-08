@@ -49,13 +49,12 @@
 
 .card-2 {
     grid-area: card-2;
-    border-left: 1px dotted rgb(47, 47, 47);
 }
 
 // THIS IS THE STYLES FOR THE PORTFOLIO SECTION
 .projects {
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: 4rem;
     grid-template-columns: repeat(3, 1fr);
 }
 
