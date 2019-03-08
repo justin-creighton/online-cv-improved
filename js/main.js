@@ -2,34 +2,6 @@ function sidebar() {
     document.getElementById("navbar").classList.toggle('active');
 }
 
-// THIS IS THE STYLES TO LET THE BODY MOVE IN AS THE NAVBAR OPENS
-let openBody = false;
-
-let bodyCompress = function () {
-       let content = document.querySelector(".wrapper");
-           headerBg = document.querySelector("header")
-
-        if (openBody === false) {
-            content.style.marginLeft = "12%";
-            content.style.width = "88%";
-            content.style.transition = "margin 0.5s ease-in-out, width 0.5s ease-in-out";
-            headerBg.style.backgroundSize = "84rem 100%";
-
-            openBody = true;
-        }
-
-        else if (openBody === true) {
-            content.style.marginLeft = "0";
-            content.style.width = "100%";
-            content.style.transition = "margin 0s ease-in-out, width 0s ease-in-out";
-            headerBg.style.backgroundSize = "100% 100%";
-            
-            openBody = false;
-        }
-}
-
-
-
 // THIS IS THE STYLES FOR THE CONTACT INFORMATION MENU
 let toggleContactMenu = false;
 

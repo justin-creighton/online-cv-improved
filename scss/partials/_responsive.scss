@@ -1,0 +1,230 @@
+// MEDIA QUERY FOR MOBILE//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+@media only screen and (max-width: 375px) {
+
+    // THIS IS THE STYLES FOR THE HEADER
+    header {
+        background-size: cover;
+    }
+
+.head {
+    padding-top: 8rem;
+    font-family: "Poiret One";
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+
+    .main-title {
+        display: initial;
+    }
+
+    .animation {
+        visibility: hidden;
+
+        span {
+            visibility: hidden;
+            animation: 0;
+        }
+    }
+}
+
+    // THIS IS THE STYLES FOR THE NAVBAR
+    #navbar {
+        width: 100%;
+        height: 15rem;
+        z-index: 1000;
+        left: 0;
+        top: -15rem;
+        transition: all 0.5s ease-in-out;
+        box-shadow: none;
+    }
+    
+    #navbar.active {
+        top: 0;
+    }
+    
+    #navbar ul {
+        margin: 0;
+        padding-top: 2rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    #navbar ul li a {
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+    }
+    
+    #navbar ul li a::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        height: 0;
+        width: 0%;
+        background: rgb(0, 0, 0);
+        transition: all 0.3s ease-in-out;
+        z-index: -1;
+        opacity: 0.5;
+    }
+    
+    #navbar ul li a:hover::before {
+        height: 100%;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.657);
+        opacity: 1;
+    }
+    
+    #navbar ul li a:hover {
+        color: rgb(255, 255, 255);
+    }
+    
+    #navbar ul span {
+        position: absolute;
+        color: rgb(0, 0, 0);
+        font-family: Arial, Helvetica, sans-serif;
+        top: 4%;
+        right: 8%;
+        cursor: default;
+        padding: 0.2rem 0.4rem;
+        border-radius: 50%;
+    }
+    
+    #navbar ul span:hover {
+        background: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+
+    // THIS IS THE STYLES FOR THE CONTACT INFORMATION
+    .contact-info {
+        position: absolute;
+        height: 10rem;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 60%;
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+    }
+    .holder {
+        position: relative;
+        width: 100%;
+        height: 8rem;
+
+        span {
+            position: absolute;
+            z-index: 2;
+        
+            i {
+                font-size: 2rem;
+                color: rgb(255, 255, 255);
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+            }
+        }
+    }
+
+    .tool-tip {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 30%;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+        font-family: "Dosis";
+        background: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        width: 5rem;
+        border-radius: 1rem;
+        padding-left: 1rem;
+    }
+
+    .text-slider:hover .tool-tip {
+        left: 1rem;
+        opacity: 1;
+        box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.822);
+    }
+
+    .button-1 {
+        @include buttons;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .button-2 {
+        @include buttons;
+        right: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .main-button-toggle {
+        @include buttons;
+        animation: pulsating 1.5s ease infinite;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    @keyframes pulsating {
+        0% {
+            background: rgba(255, 0, 0, 0.787);
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+
+        50%   {
+            background: rgba(255, 0, 0, 0.3);
+            width: 5rem;
+            height: 5rem;
+        }
+
+        100%   {
+            background: rgba(255, 0, 0, 0.787);
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+    }
+
+    .holder p {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+    }
+
+    .phone {
+        opacity: 0;
+        top: 4rem;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        transition: all .2s ease-in-out;
+        animation: ring 1s ease infinite;
+    }
+
+    .email {
+        opacity: 0;
+        left: 4rem;
+        top: 50%;
+        transform: translate(0%, -50%);
+        transition: all .2s ease-in-out 0.2s;
+    }
+
+    .portfolio {
+        opacity: 0;
+        right: 4rem;
+        top: 50%;
+        transform: translate(0%, -50%);
+        transition: all .2s ease-in-out 0.6s;
+    }
+
+    .about-me {
+        opacity: 0;
+        bottom: 4rem;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        transition: all .2s ease-in-out 0.4s;
+    }
+}
+
