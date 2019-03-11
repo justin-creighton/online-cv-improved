@@ -2,8 +2,8 @@
 .about {
     margin: auto;
     width: 84%;
-    display: grid;
     height: 100vh;
+    display: grid;
     grid-template-columns: 20% 80%;
     grid-template-areas: 
     "image intro";
@@ -28,7 +28,7 @@
 #edu {
     font-family: "Dosis";
     letter-spacing: 0.1rem;
-    color: $text-color;
+    color: $text-color-1;
     margin: 2rem auto;
     width: 94%;
     display: grid;

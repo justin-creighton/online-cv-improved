@@ -1,455 +1,3 @@
-
-// THESE ARE THE STYLES FOR NAVBAR
-#navbar {
-    width: 12%;
-    height: 100%;
-    background: rgb(247, 247, 247);
-    position: fixed;
-    z-index: 1000;
-    left: -12%;
-    transition: left 0.5s ease-in-out;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.671);
-}
-
-#navbar.active {
-    left: 0%;
-}
-
-#navbar ul {
-    margin: 0;
-    padding: 8rem 1rem 0 0;
-    position: relative;
-}
-
-#navbar ul li {
-    list-style: none;
-}
-
-#navbar ul li a {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    font-family: "Dosis";
-    padding: 0.4rem 1rem;
-    color: rgb(0, 0, 0);
-    font-size: 1.2rem;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-}
-
-#navbar ul li a::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 0%;
-    background: rgb(0, 0, 0);
-    transition: all 0.3s ease-in-out;
-    z-index: -1;
-    opacity: 0.5;
-}
-
-#navbar ul li a:hover::before {
-    width: 100%;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.657);
-    opacity: 1;
-}
-
-#navbar ul li a:hover {
-    color: rgb(255, 255, 255);
-}
-
-#navbar ul span {
-    position: absolute;
-    color: rgb(0, 0, 0);
-    font-family: Arial, Helvetica, sans-serif;
-    top: 4%;
-    right: 8%;
-    cursor: default;
-    padding: 0.2rem 0.4rem;
-    border-radius: 50%;
-}
-
-#navbar ul span:hover {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-}
-
-// THIS IS THE STYLING FOR THE TOGGLE NAVBAR
-#menu-toggle-btn {
-    margin: 0.5rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 0.1rem;
-    z-index: 500;
-    background: rgb(255, 255, 255);
-    border-radius: 0.2rem;
-}
-
-#menu-toggle-btn p {
-    padding: 0.1rem 0.8rem;
-    background: rgb(0, 0, 0);
-    margin: 0.3rem;
-    border-radius: 1rem;
-}
-
-#menu-toggle-btn:hover {
-    box-shadow: 0 0 10px rgb(255, 255, 255);
-}
-
-#menu-toggle-btn span {
-    color: rgb(255, 255, 255);
-    position: absolute;
-    margin-top: 0.2rem;
-    font-size: 0.9rem;
-    font-family: "Poiret One";
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
-
-#menu-toggle-btn:hover span {
-    opacity: 1;
-}
-
-
-// THESE ARE THE STYLES FOR THE HEADING AND MAIN TITLE
-.head {
-    text-align: center;
-    padding-top: 16rem;
-    color: $headings-color;
-    position: relative;
-
-    .main-heading {
-        margin: auto;
-        font-size: 1.4rem;
-        letter-spacing: 0.2rem;
-    }
-
-    .main-title {
-        display: none;
-    }
-
-    .animation {
-        position: relative;
-        width: 46rem;
-        height: 7rem;
-        margin: auto;
-
-        span {
-            font-family: "Poiret One";
-            font-size: 5rem;
-            padding-bottom: 1rem;
-            letter-spacing: 0.3rem;
-            margin: auto;
-            position: absolute;
-            opacity: 0;
-            text-shadow: 0 0 0 rgb(0, 0, 0);
-        }
-
-        .letter-1 {
-            left: 0;
-            animation: slide-1 2s ease forwards;
-            bottom: 0;
-        }
-
-        .letter-2 {
-            left: 7%;
-            animation: slide-2 2s ease 1 0.2s forwards;
-        }
-
-        .letter-3 {
-            left: 14%;
-            animation: slide-3 2s ease 1 0.4s forwards;
-        }
-
-        .letter-4 {
-            left: 19%;
-            animation: slide-4 2s ease 1 0.6s forwards;
-        }
-
-        .letter-5 {
-            left: 23%;
-            animation: slide-5 2s ease 1 0.8s forwards;
-        }
-
-        .letter-6 {
-            left: 27%;
-            animation: slide-6 2s ease 1 1s forwards;
-        }
-
-        .letter-7 {
-            left: 38%;
-            animation: slide-7 2s ease 1 1.2s forwards;
-        }
-
-        .letter-8 {
-            left: 48%;
-            animation: slide-8 2s ease 1 1.4s forwards;
-        }
-
-        .letter-9 {
-            left: 54%;
-            animation: slide-9 2s ease 1 1.6s forwards;
-        }
-
-        .letter-10 {
-            left: 61%;
-            animation: slide-10 2s ease 1 1.8s forwards;
-        }
-
-        .letter-11 {
-            left: 65%;
-            animation: slide-11 2s ease 1 2s forwards;
-        }
-
-        .letter-12 {
-            left: 73%;
-            animation: slide-12 2s ease 1 2.2s forwards;
-        }
-
-        .letter-13 {
-            left: 80%;
-            animation: slide-13 2s ease 1 2.4s forwards;
-        }
-
-        .letter-14 {
-            left: 84%;
-            animation: slide-14 2s ease 1 2.6s forwards;
-        }
-
-        .letter-15 {
-            left: 89%;
-            animation: slide-15 2s ease 1 2.8s forwards;
-        }
-    }
-}
-
-@keyframes slide-1 {
-    from {
-        left: -7%;
-        opacity: 0;
-        transform: rotateZ(0deg);
-    }
-
-    to   {
-        left: 0;
-        opacity: 1;
-        transform: rotate(360deg);
-        text-shadow: 10px 10px 5px rgb(0, 0, 0);
-    }
-}
-
-@keyframes slide-2 {
-    from {
-        bottom: 6rem;
-        opacity: 0;
-        left: 14%;
-    }
-
-    to   {
-        bottom: 0;
-        opacity: 1;
-        text-shadow: 8px 10px 5px rgb(0, 0, 0);
-        left: 7%;
-    }
-}
-
-@keyframes slide-3 {
-    from {
-        top: 6rem;
-        opacity: 0;
-        left: 28%;
-    }
-
-    to   {
-        top: 0;
-        opacity: 1;
-        text-shadow: 6px 10px 5px rgb(0, 0, 0);
-        left: 14%;
-    }
-}
-
-@keyframes slide-4 {
-    from {
-        bottom: 6rem;
-        opacity: 0;
-        left: 24%;
-    }
-    
-    to   {
-        bottom: 0;
-        opacity: 1;
-        text-shadow: 5px 10px 5px rgb(0, 0, 0);
-        left: 19%;
-    }
-}
-
-@keyframes slide-5 {
-    from {
-        top: 6rem;
-        opacity: 0;
-        left: 28%;
-    }
-
-    to   {
-        top: 0;
-        opacity: 1;
-        text-shadow: 5px 10px 5px rgb(0, 0, 0);
-        left: 23%;
-    }
-}
-
-@keyframes slide-6 {
-    from {
-        bottom: 6rem;
-        opacity: 0;
-        left: 33%;
-    }
-
-    to   {
-        bottom: 0;
-        opacity: 1;
-        text-shadow: 4px 10px 5px rgb(0, 0, 0);
-        left: 27%;
-    }
-}
-
-@keyframes slide-7 {
-    from {
-        top: 6rem;
-        opacity: 0;
-        left: 43%;
-    }
-
-    to   {
-        top: 0;
-        opacity: 1;
-        text-shadow: 2px 10px 5px rgb(0, 0, 0);
-        left: 38%;
-    }
-}
-
-@keyframes slide-8 {
-    from {
-        bottom: 6rem;
-        opacity: 0;
-    }
-
-    to   {
-        bottom: 0;
-        opacity: 1;
-        text-shadow: 0px 10px 5px rgb(0, 0, 0);
-    }
-}
-
-@keyframes slide-9 {
-    from {
-        top: 6rem;
-        opacity: 0;
-        left: 48%;
-    }
-
-    to   {
-        top: 0;
-        opacity: 1;
-        text-shadow: -2px 10px 5px rgb(0, 0, 0);
-        left: 54%;
-    }
-}
-
-@keyframes slide-10 {
-    from {
-        bottom: 6rem;
-        opacity: 0;
-        left: 55%;
-    }
-
-    to   {
-        bottom: 0;
-        opacity: 1;
-        text-shadow: -4px 10px 5px rgb(0, 0, 0);
-        left: 61%;
-    }
-}
-
-@keyframes slide-11 {
-    from {
-        top: 6rem;
-        opacity: 0;
-        left: 59%;
-    }
-
-    to   {top: 0;
-        opacity: 1;
-        text-shadow: -5px 10px 5px rgb(0, 0, 0);
-        left: 65%;
-    }
-}
-
-@keyframes slide-12 {
-    from {
-        bottom: 6rem;
-        opacity: 0;
-    }
-
-    to   {
-        bottom: 0;
-        opacity: 1;
-        text-shadow: -5px 10px 5px rgb(0, 0, 0);
-    }
-}
-
-@keyframes slide-13 {
-    from {
-        top: 6rem;
-        opacity: 0;
-        left: 74%;
-    }
-
-    to   {
-        top: 0;
-        opacity: 1;
-        text-shadow: -6px 10px 5px rgb(0, 0, 0);
-        left: 80%;
-    }
-}
-
-@keyframes slide-14 {
-    from {
-        bottom: 6rem;
-        opacity: 0;
-        left: 78%;
-    }
-
-    to   {
-        bottom: 0;
-        opacity: 1;
-        text-shadow: -8px 10px 5px rgb(0, 0, 0);
-        left: 84%;
-    }
-}
-
-@keyframes slide-15 {
-    from {
-        right: -6rem;
-        opacity: 0;
-        transform: rotateZ(0deg);
-        left: 84%;
-    }
-
-    to   {
-        right: 0;
-        opacity: 1;
-        transform: rotateZ(-360deg);
-        text-shadow: -10px 10px 5px rgb(0, 0, 0);
-        left: 89%;
-    }
-}
-
-
 // THIS IS THE STYLES FOR THE CONTACT INFORMATION
 .contact-info {
     position: absolute;
@@ -457,6 +5,8 @@
     right: 2rem;
     top: 10%;
     bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr;
 }
 .holder {
     position: relative;
@@ -465,7 +15,7 @@
 
     span {
         position: absolute;
-        z-index: 2;
+        z-index: 1000;
     
         i {
             font-size: 2rem;
@@ -474,6 +24,9 @@
             transform: translate(-50%, -50%);
             top: 50%;
             left: 50%;
+            padding: 1rem;
+            background: rgb(221, 216, 216);
+            border-radius: 50%;
         }
     }
 }
@@ -488,15 +41,15 @@
     font-family: "Dosis";
     background: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    width: 5rem;
+    width: 5.3rem;
     border-radius: 1rem;
     padding-left: 1rem;
+    z-index: 500;
 }
 
 .text-slider:hover .tool-tip {
-    left: 1rem;
+    left: 1.4rem;
     opacity: 1;
-    box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.822);
 }
 
 .text-slider {
@@ -506,35 +59,37 @@
 
 .button-1 {
     @include buttons;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 
 .button-2 {
     @include buttons;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 
 .main-button-toggle {
     @include buttons;
     animation: pulsating 1.5s ease infinite;
+    transform: translate(-50%, -50%);
+    top: 50%;
     left: 50%;
 }
 
 @keyframes pulsating {
     0% {
         background: rgba(255, 0, 0, 0.787);
-        width: 3.5rem;
-        height: 3.5rem;
     }
 
     50%   {
         background: rgba(255, 0, 0, 0.3);
-        width: 5rem;
-        height: 5rem;
     }
 
     100%   {
         background: rgba(255, 0, 0, 0.787);
-        width: 3.5rem;
-        height: 3.5rem;
     }
 }
 
@@ -551,7 +106,7 @@
     top: 4rem;
     left: 50%;
     transform: translate(-50%, 0%);
-    transition: all .2s ease-in-out;
+    transition: all .3s ease-in-out;
     animation: ring 1s ease infinite;
 }
 
@@ -560,7 +115,7 @@
     left: 4rem;
     top: 50%;
     transform: translate(0%, -50%);
-    transition: all .2s ease-in-out 0.2s;
+    transition: all .3s ease-in-out 0.2s;
 }
 
 .portfolio {
@@ -568,7 +123,7 @@
     right: 4rem;
     top: 50%;
     transform: translate(0%, -50%);
-    transition: all .2s ease-in-out 0.6s;
+    transition: all .3s ease-in-out 0.6s;
 }
 
 .about-me {
@@ -576,20 +131,7 @@
     bottom: 4rem;
     left: 50%;
     transform: translate(-50%, 0%);
-    transition: all .2s ease-in-out 0.4s;
-}
-
-
-// THIS IS THE STYLES FOR THE ABOUT SECTION
-.image img {
-    width: 100%;
-    height: 100%;
-}
-
-.intro {
-    font-family: "Dosis";
-    color: $text-color;
-    font-size: 1.2rem;
+    transition: all .3s ease-in-out 0.4s;
 }
 
 // THIS IS THE FIRST PARRALAX
@@ -597,39 +139,9 @@
     margin: auto;
     width: 95%;
     height: 15rem;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/achievement-agreement-arms-1068523.jpg);
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/heading.jpg);
     background-size: cover;
     background-attachment: fixed;
-}
-
-// THIS IS THE STYLES FOR THE EDUCATION SECTION
-.title {
-    text-align: center;
-}
-
-.card-1,
-.card-2 {
-    padding: 1rem 6rem;
-}
-
-.card-1 {
-
-    ul li {
-        margin: 0.5rem 0;
-        list-style-type: circle;
-    }
-
-    img {
-        width: 6rem;
-    }
-}
-
-.card-2 {
-    
-    img {
-        width: 22rem;
-        padding-bottom: 0.5rem;
-    }
 }
 
 // THIS IS THE SECOND PARRALAX
@@ -637,7 +149,7 @@
     margin: auto;
     width: 95%;
     height: 15rem;
-    background: url(../images/backlit-blogging-business-34153.jpg);
+    background: url(../images/bg4.jpeg);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -739,7 +251,6 @@
             button:hover::before {
                 width: 100%;
             }
-
         }
     }
 

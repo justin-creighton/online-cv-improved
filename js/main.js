@@ -15,8 +15,9 @@ let toggleMenu = function () {
 
         if (toggleContactMenu === false) {
 
-            buttonSwitch.style.width = "12rem";
-            buttonSwitch.style.height = "12rem";
+            buttonSwitch.style.animation = "pulsating 0s ease infinite";
+            buttonSwitch.style.width = "5rem";
+            buttonSwitch.style.height = "5rem";
             buttonSwitch.style.background = "rgba(255, 0, 0, 0.3)";
 
             cellNumber.style.top = "0";
@@ -36,6 +37,7 @@ let toggleMenu = function () {
 
         else if (toggleContactMenu === true) {
 
+            buttonSwitch.style.animation = "pulsating 1.5s ease infinite";
             buttonSwitch.style.width = "3rem";
             buttonSwitch.style.height = "3rem";
             buttonSwitch.style.background = "rgba(255, 0, 0, 0.5)";
