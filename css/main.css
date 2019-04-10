@@ -14,15 +14,20 @@
   .holder span {
     position: absolute;
     z-index: 1000; }
-    .holder span i {
-      font-size: 2rem;
-      color: white;
-      position: absolute;
-      transform: translate(-50%, -50%);
-      top: 50%;
-      left: 50%;
-      padding: 1rem;
-      border-radius: 50%; }
+    .holder span a {
+      text-decoration: none;
+      color: white; }
+      .holder span a i {
+        font-size: 2rem;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        padding: 1rem;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out; }
+      .holder span a i:hover {
+        font-size: 3rem; }
 
 .tool-tip {
   position: absolute;
@@ -164,8 +169,6 @@
     height: 16rem;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.739);
     transition: all 0.5s ease-in-out; }
-  .projects .box:hover {
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.739); }
   .projects .imgBox {
     background: red;
     position: relative;
@@ -176,6 +179,8 @@
       width: 100%;
       transform: scale(1.2);
       transition: all 0.5s ease-in-out; }
+  .projects .box:hover {
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.739); }
   .projects .box:hover img {
     transform: scale(1); }
   .projects .details {
@@ -617,13 +622,20 @@ footer {
   left: -12%;
   transition: left 0.5s ease-in-out;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.671); }
+  #navbar img {
+    position: absolute;
+    width: 7rem;
+    height: 7rem;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%); }
 
 #navbar.active {
   left: 0%; }
 
 #navbar ul {
   margin: 0;
-  padding: 8rem 1rem 0 0;
+  padding: 16rem 1rem 0 0;
   position: relative; }
 
 #navbar ul li {
@@ -751,7 +763,8 @@ footer {
   width: 90%;
   margin: 4rem auto 2rem auto;
   padding: 0 2rem 4rem 2rem;
-  text-align: center; }
+  text-align: center;
+  perspective: 1000px; }
   .projects h1 {
     color: #525252;
     font-family: "Poiret One";
@@ -764,9 +777,11 @@ footer {
     overflow: hidden;
     height: 16rem;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.739);
-    transition: all 0.5s ease-in-out; }
+    transition: all 0.7s ease-in-out; }
+  .projects .box:nth-child(3) {
+    height: 20rem; }
   .projects .box:hover {
-    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.739); }
+    box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.739); }
   .projects .imgBox {
     background: red;
     position: relative;
@@ -781,13 +796,12 @@ footer {
     transform: scale(1); }
   .projects .details {
     position: absolute;
-    top: 0;
-    bottom: 0;
+    height: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     background: rgba(0, 0, 0, 0.842);
     transition: all 0.5s ease-in-out;
-    transform: scale(1.5);
     filter: blur(10px);
     opacity: 0; }
     .projects .details .content {
@@ -822,9 +836,11 @@ footer {
       .projects .details .content button:hover::before {
         width: 100%; }
   .projects .box:hover .details {
-    transform: scale(1);
-    filter: blur(0);
-    opacity: 1; }
+    opacity: 1;
+    height: 100%;
+    transform: rotateY(180deg); }
+  .projects .box:hover {
+    transform: rotateY(180deg); }
 
 .about {
   margin: auto;
@@ -869,7 +885,7 @@ footer {
 
 .projects {
   display: grid;
-  grid-gap: 4rem;
+  grid-gap: 0.5rem;
   grid-template-columns: repeat(3, 1fr); }
 
 .details {
