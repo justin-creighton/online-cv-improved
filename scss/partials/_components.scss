@@ -16,7 +16,7 @@
     span {
         position: absolute;
         z-index: 1000;
-    
+
         a {
             text-decoration: none;
             color: rgb(255, 255, 255);
@@ -30,7 +30,7 @@
                 border-radius: 50%;
                 transition: all 0.3s ease-in-out;
             }
-    
+
             i:hover {
                 font-size: 3rem;
             }
@@ -160,112 +160,3 @@
     background-size: cover;
     background-attachment: fixed;
 }
-
-// THIS IS THE STYLES FOR THE PORTFOLIO SECTION
-.projects {
-    width: 90%;
-    margin: 4rem auto 2rem auto;
-    padding: 0 2rem 4rem 2rem;
-    text-align: center;
-
-    h1 {
-        color: rgb(82, 82, 82);
-        font-family: "Dosis";
-        letter-spacing: 0.1rem;
-        font-size: 3rem;
-        grid-column: -1/1;
-    }
-
-    .box {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        height: 16rem;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.739);
-        transition: all 0.5s ease-in-out;
-    }
-
-    .imgBox {
-        background: red;
-        position: relative;
-        overflow: hidden;
-        height: 100%;
-
-        img {
-            height: 100%;
-            width: 100%;
-            transform: scale(1.2);
-            transition: all 0.5s ease-in-out;
-        }
-    }
-
-    .box:hover {
-        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.739);
-    }
-
-    .box:hover img {
-        transform: scale(1);
-    }
-
-    .details {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.842);
-        transition: all 0.5s ease-in-out;
-        transform: scale(1.5);
-        filter: blur(10px);
-        opacity: 0;
-
-        .content {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: rgb(255, 255, 255);
-            font-family: "Poiret One";
-            letter-spacing: 0.1rem;
-            padding: 0 1rem;
-
-            button {
-                background: rgba(255, 255, 255, 0);
-                border: none;
-                outline: none;
-                position: relative;
-                color: rgb(255, 255, 255);
-                font-family: "Dosis";
-                letter-spacing: 0.1rem;
-                text-transform: uppercase;
-            }
-
-            button:hover {
-                color: rgb(0, 0, 0);
-            }
-
-            button::before {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                top: 0;
-                left: 0;
-                width: 0;
-                z-index: -1;
-                background: rgb(255, 255, 255);
-                transition: all 0.3s ease-in-out
-            }
-
-            button:hover::before {
-                width: 100%;
-            }
-        }
-    }
-
-    .box:hover .details {
-        transform: scale(1);
-        filter: blur(0);
-        opacity: 1;
-    }
-}
-
-

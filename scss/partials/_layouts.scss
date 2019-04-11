@@ -5,7 +5,7 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 20% 80%;
-    grid-template-areas: 
+    grid-template-areas:
     "image intro";
 }
 
@@ -33,7 +33,7 @@
     width: 94%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 
+    grid-template-areas:
     "title title"
     "card-1 card-2";
 }
@@ -54,11 +54,12 @@
 // THIS IS THE STYLES FOR THE PORTFOLIO SECTION
 .projects {
     display: grid;
-    grid-gap: 0.5rem;
+    grid-gap: 1rem;
     grid-template-columns: repeat(3, 1fr);
 }
 
-.details {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 0.3rem;
 }
