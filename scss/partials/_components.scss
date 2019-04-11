@@ -144,7 +144,7 @@
 // THIS IS THE FIRST PARRALAX
 .parralax-1 {
     margin: auto;
-    width: 95%;
+    width: calc(100% - 10rem);
     height: 15rem;
     background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/heading.jpg);
     background-size: cover;
@@ -154,7 +154,7 @@
 // THIS IS THE SECOND PARRALAX
 .parralax-2 {
     margin: auto;
-    width: 95%;
+    width: calc(100% - 10rem);
     height: 15rem;
     background: url(../images/bg4.jpeg);
     background-size: cover;

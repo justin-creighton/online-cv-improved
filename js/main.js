@@ -56,4 +56,24 @@ let toggleMenu = function () {
 
             toggleContactMenu = false;
         }
+};
+
+let i = 0;
+    para1 = 'I am a hardworking individual who likes challenges, because I believe it allows us to discover new things and reach greater heights. I enjoy working within a team, especially a diverse one, because it allows you to come up with ideas quicker and we get ideas from differt persecptives.' + "Technology has been my thing for as long as I can remember and I am always looking atthe latest trends and descoveries in the tech industry. I am good at working in a team and good at problem solving. I am very creative and like to follow my passions and my imagination";
+    speed = 50;
+
+function typeWriter() {
+    if (i < para1.length) {
+        document.getElementById("paragraph1").innerHTML += para1.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+}
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+    if (document.body.scrollTop > 750 || document.documentElement.scrollTop > 750) {
+        typeWriter();
+    } 
 }

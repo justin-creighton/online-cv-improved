@@ -1,7 +1,7 @@
 // THIS IS THE STYLES FOR THE ABOUT SECTION
 .about {
     margin: auto;
-    width: 84%;
+    width: calc(100% - 10rem);
     height: 100vh;
     display: grid;
     grid-template-columns: 20% 80%;
@@ -30,7 +30,7 @@
     letter-spacing: 0.1rem;
     color: $text-color-1;
     margin: 2rem auto;
-    width: 94%;
+    width: calc(100% - 10rem);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
