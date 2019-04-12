@@ -143,14 +143,6 @@
   background-size: cover;
   background-attachment: fixed; }
 
-.parralax-2 {
-  margin: auto;
-  width: calc(100% - 10rem);
-  height: 15rem;
-  background: url(../images/bg4.jpeg);
-  background-size: cover;
-  background-attachment: fixed; }
-
 @font-face {
   font-family: "Poiret One";
   src: url(../fonts/PoiretOne-Regular.ttf); }
@@ -169,6 +161,59 @@ body {
   margin: 0;
   width: 100%;
   overflow: hidden; }
+
+nav {
+  width: 6rem;
+  height: auto;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  perspective: 1400px;
+  opacity: 0; }
+  nav .links {
+    width: 100%;
+    height: 5rem;
+    transform-style: preserve-3d;
+    transition: all 0.6s ease-in-out;
+    position: relative;
+    opacity: 1; }
+    nav .links span {
+      position: absolute;
+      background: black;
+      width: 100%;
+      height: 5rem; }
+    nav .links .front-wall {
+      transform: translateZ(3rem); }
+      nav .links .front-wall a {
+        text-decoration: none;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+    nav .links .back-wall {
+      transform: translateZ(-3rem); }
+    nav .links .top-wall {
+      top: 0;
+      transform: rotateX(-90deg) translateY(-3rem);
+      transform-origin: top; }
+    nav .links .bottom-wall {
+      bottom: 0;
+      transform: rotateX(-90deg) translateY(3rem);
+      transform-origin: bottom; }
+    nav .links .left-wall {
+      left: 0;
+      transform: rotateY(90deg) translateX(-3rem);
+      transform-origin: left; }
+    nav .links .right-wall {
+      right: 0;
+      transform: rotateY(-90deg) translateX(3rem);
+      transform-origin: right; }
+
+.links:hover {
+  transform: rotateY(-90deg); }
 
 header {
   height: 100vh;
@@ -534,79 +579,6 @@ footer {
   100% {
     width: 100%;
     background: rgba(39, 39, 39, 0.664); } }
-#navbar {
-  width: 12%;
-  height: 100%;
-  background: #f7f7f7;
-  position: fixed;
-  z-index: 1000;
-  left: -12%;
-  transition: left 0.5s ease-in-out;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.671); }
-  #navbar img {
-    position: absolute;
-    width: 7rem;
-    height: 7rem;
-    top: 5rem;
-    left: 50%;
-    transform: translateX(-50%); }
-
-#navbar.active {
-  left: 0%; }
-
-#navbar ul {
-  margin: 0;
-  padding: 16rem 1rem 0 0;
-  position: relative; }
-
-#navbar ul li {
-  list-style: none; }
-
-#navbar ul li a {
-  position: relative;
-  display: block;
-  text-decoration: none;
-  font-family: "Dosis";
-  padding: 0.4rem 1rem;
-  color: black;
-  font-size: 1.2rem;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase; }
-
-#navbar ul li a::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 0%;
-  background: black;
-  transition: all 0.3s ease-in-out;
-  z-index: -1;
-  opacity: 0.5; }
-
-#navbar ul li a:hover::before {
-  width: 100%;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.657);
-  opacity: 1; }
-
-#navbar ul li a:hover {
-  color: white; }
-
-#navbar ul span {
-  position: absolute;
-  color: black;
-  font-family: "Dosis", Arial;
-  top: 4%;
-  right: 8%;
-  cursor: default;
-  padding: 0.2rem 0.4rem;
-  border-radius: 50%; }
-
-#navbar ul span:hover {
-  background: black;
-  color: white; }
-
 #menu-toggle-btn {
   margin: 0.5rem;
   position: fixed;
@@ -710,7 +682,7 @@ footer {
       .projects .project-item .rotatingBox .bottomBox,
       .projects .project-item .rotatingBox .leftBox,
       .projects .project-item .rotatingBox .rightBox {
-        background: #2a2a2a; }
+        background: #141414; }
       .projects .project-item .rotatingBox .topBox {
         top: 0;
         transform: rotateX(-90deg) translateY(-2rem);
@@ -719,7 +691,7 @@ footer {
         transform-origin: top; }
       .projects .project-item .rotatingBox .bottomBox {
         bottom: 0;
-        transform: rotateX(90deg) translateY(2rem);
+        transform: rotateX(-90deg) translateY(2rem);
         height: 4rem;
         width: 100%;
         transform-origin: bottom; }
@@ -777,10 +749,10 @@ footer {
       left: 0;
       width: 100%;
       bottom: -2rem;
-      background: rgba(0, 0, 0, 0.068);
+      background: rgba(0, 0, 0, 0.8);
       transform-style: preserve-3d; }
   .projects .project-item:hover .rotatingBox {
-    transform: rotateY(180deg);
+    transform: rotateY(180deg) translateY(0);
     transition: all 1.5s ease-in-out; }
 
 .gallery {

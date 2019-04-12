@@ -1,12 +1,34 @@
-function sidebar() {
-    document.getElementById("navbar").classList.toggle('active');
-}
+// THIS IS THE FUNCTION FOR THE NAVBAR
+let navToggleState = false;
 
-// THIS IS THE STYLES FOR THE CONTACT INFORMATION MENU
+let navBtn = function() {
+    // let links = document.querySelectorAll(".links");
+      let  navBar = document.querySelector('#navbar');
+    // for(i = 0; i < links.length; i++);
+
+    if(navToggleState === false){
+        // links.style.opacity = "1";
+        // links.style.transform = "rotateY(360deg)";
+        navBar.style.opacity = "1";
+
+        navToggleState = true;
+
+    } else if(navToggleState === true){
+        // links.style.opacity = "0";
+        // links.style.transform = "rotateY(0deg)";
+        navBar.style.opacity = "0";
+
+        navToggleState = false;
+    };
+};
+
+
+
+// THIS IS THE FUNCTION FOR THE CONTACT INFORMATION MENU
 let toggleContactMenu = false;
 
-let toggleMenu = function () {
-    
+let toggleMenu = function() {
+
     let buttonSwitch = document.querySelector(".main-button-toggle");
         cellNumber = document.querySelector(".phone");
         email = document.querySelector(".email");
@@ -75,5 +97,5 @@ window.onscroll = function() {myFunction()};
 function myFunction() {
     if (document.body.scrollTop > 750 || document.documentElement.scrollTop > 750) {
         typeWriter();
-    } 
+    }
 }

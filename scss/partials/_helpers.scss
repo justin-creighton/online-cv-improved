@@ -1,90 +1,4 @@
 
-// THIS IS THE STYLES FOR THE NAVBAR
-#navbar {
-    width: 12%;
-    height: 100%;
-    background: rgb(247, 247, 247);
-    position: fixed;
-    z-index: 1000;
-    left: -12%;
-    transition: left 0.5s ease-in-out;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.671);
-
-    img {
-        position: absolute;
-        width: 7rem;
-        height: 7rem;
-        top: 5rem;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
-
-#navbar.active {
-    left: 0%;
-}
-
-#navbar ul {
-    margin: 0;
-    padding: 16rem 1rem 0 0;
-    position: relative;
-}
-
-#navbar ul li {
-    list-style: none;
-}
-
-#navbar ul li a {
-    position: relative;
-    display: block;
-    text-decoration: none;
-    font-family: "Dosis";
-    padding: 0.4rem 1rem;
-    color: rgb(0, 0, 0);
-    font-size: 1.2rem;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-}
-
-#navbar ul li a::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 0%;
-    background: rgb(0, 0, 0);
-    transition: all 0.3s ease-in-out;
-    z-index: -1;
-    opacity: 0.5;
-}
-
-#navbar ul li a:hover::before {
-    width: 100%;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.657);
-    opacity: 1;
-}
-
-#navbar ul li a:hover {
-    color: rgb(255, 255, 255);
-}
-
-#navbar ul span {
-    position: absolute;
-    color: rgb(0, 0, 0);
-    font-family: "Dosis", Arial;
-    top: 4%;
-    right: 8%;
-    cursor: default;
-    padding: 0.2rem 0.4rem;
-    border-radius: 50%;
-}
-
-#navbar ul span:hover {
-    background: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-}
-
 // THIS IS THE STYLING FOR THE TOGGLE NAVBAR
 #menu-toggle-btn {
     margin: 0.5rem;
@@ -191,7 +105,6 @@
 
 // THIS IS THE STYLES FOR THE PORTFOLIO SECTION
 .projects {
-    // width: calc(100% - 10rem);
     margin: auto;
     perspective: 1100px;
     text-align: center;
@@ -228,9 +141,9 @@
             .bottomBox,
             .leftBox,
             .rightBox {
-                background: rgb(42, 42, 42);
+                background: rgb(20, 20, 20);
             }
-            
+
             .topBox {
                 top: 0;
                 transform: rotateX(-90deg) translateY(-2rem);
@@ -238,14 +151,15 @@
                 width: 100%;
                 transform-origin: top;
             }
+
             .bottomBox {
                 bottom: 0;
-                transform: rotateX(90deg) translateY(2rem);
+                transform: rotateX(-90deg) translateY(2rem);
                 height: 4rem;
                 width: 100%;
                 transform-origin: bottom;
             }
-    
+
             .leftBox {
                 left: 0;
                 transform: rotateY(90deg)translateX(-2rem);
@@ -253,7 +167,7 @@
                 height: 100%;
                 transform-origin: left;
             }
-    
+
             .rightBox {
                 right: 0;
                 transform: rotateY(-90deg) translateX(2rem);
@@ -261,18 +175,18 @@
                 height: 100%;
                 transform-origin: right;
             }
-    
+
             .imgBox {
                 height: 100%;
                 width: 100%;
                 transform: translateZ(2rem);
-    
+
                 img {
                     width: 100%;
                     height: 100%;
                 }
             }
-    
+
             .details {
                 height: 100%;
                 width: 100%;
@@ -286,14 +200,14 @@
                     font-size: 2rem;
                     margin: 4rem 0 2rem 0;
                 }
-    
+
                 p {
                     color: rgb(255, 255, 255);
                     font-family: "Poiret One";
                     letter-spacing: 0.1rem;
                     padding-bottom: 2rem;
                 }
-    
+
                 a {
                     color: rgb(255, 255, 255);
                     text-decoration: none;
@@ -319,13 +233,13 @@
             left: 0;
             width: 100%;
             bottom: -2rem;
-            background: rgba(0, 0, 0, 0.068);
+            background: rgba(0, 0, 0, 0.8);
             transform-style: preserve-3d;
         }
     }
 
     .project-item:hover .rotatingBox {
-        transform: rotateY(180deg);
+        transform: rotateY(180deg) translateY(0);
         transition: all 1.5s ease-in-out;
     }
 }
@@ -396,7 +310,7 @@
 
     .img24 {
         grid-column: span 2;
-    }   
+    }
 
     .img25 {
         grid-column: span 2;
