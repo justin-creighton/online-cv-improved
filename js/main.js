@@ -2,21 +2,16 @@
 let navToggleState = false;
 
 let navBtn = function() {
-    // let links = document.querySelectorAll(".links");
-      let  navBar = document.querySelector('#navbar');
-    // for(i = 0; i < links.length; i++);
+    let links = document.querySelectorAll(".links");
+        navBar = document.getElementById("navbar");
 
     if(navToggleState === false){
-        // links.style.opacity = "1";
-        // links.style.transform = "rotateY(360deg)";
-        navBar.style.opacity = "1";
+        navBar.style.left = "0";
 
         navToggleState = true;
 
     } else if(navToggleState === true){
-        // links.style.opacity = "0";
-        // links.style.transform = "rotateY(0deg)";
-        navBar.style.opacity = "0";
+        navBar.style.left = "-7rem";
 
         navToggleState = false;
     };
