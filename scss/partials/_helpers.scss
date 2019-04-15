@@ -2,16 +2,16 @@
 #menu-toggle-btn {
     position: fixed;
     top: 1rem;
-    left: 1rem;
+    left: 1.2rem;
     height: 2.4rem;
     width: 2.8rem;
     z-index: 500;
-    background: rgb(255, 255, 255);
+    background: rgb(32, 32, 32);
     border-radius: 0.2rem;
     transition: all 0.5s ease-in-out;
 
     p {
-        background: grey;
+        background: rgb(255, 255, 255);
         border-radius: 1rem;
         margin: 0;
         left: 0.5rem;
@@ -158,7 +158,6 @@
         h2 {
             color: rgb(82, 82, 82);
             font-family: "Poiret One";
-            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
             letter-spacing: 0.1rem;
             font-size: 4rem;
             text-align: center;
@@ -201,7 +200,6 @@
     h2 {
         color: rgb(82, 82, 82);
         font-family: "Poiret One";
-        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
         letter-spacing: 0.1rem;
         font-size: 4rem;
         grid-column: -1/1;

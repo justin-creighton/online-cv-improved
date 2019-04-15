@@ -250,7 +250,7 @@ nav {
     transition: left 0.2s ease-in-out 0.3s, transform 0.2s ease-in-out; }
 
 header {
-  height: 42rem;
+  height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../images/american-cellphone-coffee-1391371.jpg);
   background-size: 100% 100%;
   position: relative; }
@@ -682,15 +682,15 @@ footer {
 #menu-toggle-btn {
   position: fixed;
   top: 1rem;
-  left: 1rem;
+  left: 1.2rem;
   height: 2.4rem;
   width: 2.8rem;
   z-index: 500;
-  background: white;
+  background: #202020;
   border-radius: 0.2rem;
   transition: all 0.5s ease-in-out; }
   #menu-toggle-btn p {
-    background: grey;
+    background: white;
     border-radius: 1rem;
     margin: 0;
     left: 0.5rem;
@@ -772,7 +772,6 @@ footer {
   #edu .title h2 {
     color: #525252;
     font-family: "Poiret One";
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     letter-spacing: 0.1rem;
     font-size: 4rem;
     text-align: center; }
@@ -801,7 +800,6 @@ footer {
   .projects h2 {
     color: #525252;
     font-family: "Poiret One";
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
     letter-spacing: 0.1rem;
     font-size: 4rem;
     grid-column: -1/1; }
@@ -995,16 +993,14 @@ footer {
   grid-template-columns: repeat(2, 1fr); }
 
 @media only screen and (max-width: 1025px) {
-  header {
-    height: 40rem; }
-    header .head {
-      padding-top: 10rem;
-      font-family: "Poiret One";
-      font-size: 2rem;
+  header .head {
+    padding-top: 10rem;
+    font-family: "Poiret One";
+    font-size: 2rem;
+    letter-spacing: 0.1rem; }
+    header .head div h2 {
+      font-size: 1.6rem;
       letter-spacing: 0.1rem; }
-      header .head div h2 {
-        font-size: 1.6rem;
-        letter-spacing: 0.1rem; }
 
   .contact-info {
     position: absolute;
