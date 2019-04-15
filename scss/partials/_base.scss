@@ -24,39 +24,42 @@ body {
     overflow: hidden;
 }
 
+p {
+    font-family: "Dosis";
+}
+
 nav {
-    width: 6rem;
+    width: 4rem;
     height: auto;
     position: fixed;
-    left: -7rem;
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
-    perspective: 2000px;
-    transition: all 0.5s ease-in-out;
+    perspective: 4000px;
     z-index: 4;
 
     .links {
         width: 100%;
-        height: 5rem;
+        height: 4rem;
         transform-style: preserve-3d;
-        transition: all 0.6s ease-in-out;
         position: relative;
-        margin: 0.6rem 0;
+        margin: 0.2rem 0;
+        left: -5rem;
 
         span {
             position: absolute;
             background: rgb(39, 39, 39);
             width: 100%;
-            height: 5rem;
+            height: 4rem;
         }
 
         .front-wall {
-            transform: translateZ(3rem);
-            background: rgb(255, 0, 0);
+            transform: translateZ(2rem);
+            background: rgb(66, 66, 66);
 
             i {
                 color: white;
-                font-size: 2rem;
+                font-size: 1.6rem;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -65,42 +68,43 @@ nav {
         }
 
         .back-wall {
-            transform: translateZ(-3rem);
+            transform: translateZ(-2rem);
         }
 
         .top-wall {
             top: 0;
-            transform: rotateX(-90deg) translateY(-3rem);
+            transform: rotateX(-90deg) translateY(-2rem);
             transform-origin: top;
-            height: 6rem;
+            height: 4rem;
             z-index: 2;
+            background: rgb(0, 0, 0);
         }
 
         .bottom-wall {
             bottom: 0;
-            transform: rotateX(-90deg) translateY(3rem);
+            transform: rotateX(-90deg) translateY(2rem);
             transform-origin: bottom;
             background: rgb(0, 0, 0);
-            height: 6rem;
+            height: 4rem;
         }
 
         .left-wall {
             left: 0;
-            transform: rotateY(90deg)translateX(-3rem);
+            transform: rotateY(90deg)translateX(-2rem);
             transform-origin: left;
         }
 
         .right-wall {
             right: 0;
-            transform: rotateY(90deg) translateX(3rem);
+            transform: rotateY(90deg) translateX(2rem);
             transform-origin: right;
-            background: rgb(66, 66, 66);
+            background: rgb(0, 0, 0);
 
             a {
                 text-decoration: none;
                 color: white;
-                font-size: 1rem;
-                font-family: "Dosis";
+                font-size: 0.7rem;
+                font-family: "Poiret One";
                 position: absolute;
                 padding: 2rem;
                 top: 50%;
@@ -109,30 +113,138 @@ nav {
             }
         }
     }
+
+    .turn:hover {
+        transform: rotateY(-90deg);
+    }
+
+    .links:nth-child(1) {
+        transition: left 0.2s ease-in-out, transform 0.2s ease-in-out;
+    }
+
+    .links:nth-child(2) {
+        transition: left 0.2s ease-in-out 0.1s, transform 0.2s ease-in-out;
+    }
+
+    .links:nth-child(3) {
+        transition: left 0.2s ease-in-out 0.2s, transform 0.2s ease-in-out;
+    }
+
+    .links:nth-child(4) {
+        transition: left 0.2s ease-in-out 0.3s, transform 0.2s ease-in-out;
+    }
 }
 
 
-.links:hover {
-    transform: rotateY(270deg);
-}
+
+
 
 header {
-    height: 100vh;
+    height: 42rem;
     background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../images/american-cellphone-coffee-1391371.jpg);
     background-size: 100% 100%;
     position: relative;
 }
 
 footer {
-    background: rgb(0, 0, 0);
-    text-align: center;
-    height: 6rem;
+    height: 16rem;
+    padding: 2rem 0;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.3);
+
+    a::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0.1rem;
+        background: rgba(255, 0, 0, 0.598);
+        transition: all 0.5s ease-in-out;
+    }
+
+    a:hover::before {
+        width: 100%;
+    }
+
+    .personal-details {
+        border-right: 0.5px dotted rgba(0, 0, 0, 0.292);
+        padding-left: 2rem;
+
+        h6 {
+            font-size: 1.6rem;
+            margin: 0;
+            position: relative;
+            letter-spacing: 0.4rem;
+            position: relative;
+            z-index: 2;
+            font-family: "Poiret One";
+        }
+
+        p {
+            color: rgb(0, 0, 0);
+            font-size: 1rem;
+            letter-spacing: 1px;
+            font-family: "Dosis";
+            padding: 1rem 0;
+
+            i {
+                padding: 0.5rem;
+                margin-right: 2rem;
+                color: rgb(255, 255, 255);
+                font-size: 1rem;
+                background: rgba(255, 0, 0, 0.598);
+                border-radius: 0.5rem;
+            }
+        }
+    }
+
+    .project-links {
+        padding-left: 12rem;
+
+        h6 {
+            font-size: 1.2rem;
+            margin: 0;
+            letter-spacing: 0.1rem;
+            font-family: "Dosis";
+            text-transform: uppercase;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            position: relative;
+        }
+
+        h6::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 6rem;
+            height: 0.1rem;
+            background: red;
+        }
+
+        p {
+
+            a {
+                font-size: 0.8rem;
+                padding: 0.2rem;
+                letter-spacing: 0.1rem;
+                font-family: "Dosis";
+                text-transform: uppercase;
+                color: rgb(0, 0, 0);
+                text-decoration: none;
+                position: relative;
+            }
+        }
+    }
+}
+
+.designer {
+    height: 4rem;
+    background: rgb(223, 223, 223);
 
     p {
+        text-align: center;
         margin: 0;
-        padding: 2rem 0;
-        font-family: "Poiret One";
-        font-size: 1.2rem;
-        color: rgb(255, 255, 255)
+        padding-top: 1.5rem;
     }
 }

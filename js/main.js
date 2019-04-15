@@ -3,15 +3,18 @@ let navToggleState = false;
 
 let navBtn = function() {
     let links = document.querySelectorAll(".links");
-        navBar = document.getElementById("navbar");
 
     if(navToggleState === false){
-        navBar.style.left = "0";
+        for(let i = 0; i < links.length; i++) {
+            links[i].style.left = "0.5rem";
+        }
 
         navToggleState = true;
 
     } else if(navToggleState === true){
-        navBar.style.left = "-7rem";
+        for(let i = 0; i < links.length; i++) {
+            links[i].style.left = "-5rem";
+        }
 
         navToggleState = false;
     };
@@ -75,22 +78,22 @@ let toggleMenu = function() {
         }
 };
 
-let i = 0;
-    para1 = 'I am a hardworking individual who likes challenges, because I believe it allows us to discover new things and reach greater heights. I enjoy working within a team, especially a diverse one, because it allows you to come up with ideas quicker and we get ideas from differt persecptives.' + "Technology has been my thing for as long as I can remember and I am always looking atthe latest trends and descoveries in the tech industry. I am good at working in a team and good at problem solving. I am very creative and like to follow my passions and my imagination";
-    speed = 50;
-
-function typeWriter() {
-    if (i < para1.length) {
-        document.getElementById("paragraph1").innerHTML += para1.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-    }
-}
-
-window.onscroll = function() {myFunction()};
-
-function myFunction() {
-    if (document.body.scrollTop > 750 || document.documentElement.scrollTop > 750) {
-        typeWriter();
-    }
-}
+// let i = 0;
+//     para1 = 'I am a hardworking individual who likes challenges, because I believe it allows us to discover new things and reach greater heights. I enjoy working within a team, especially a diverse one, because it allows you to come up with ideas quicker and we get ideas from differt persecptives.' + "Technology has been my thing for as long as I can remember and I am always looking atthe latest trends and descoveries in the tech industry. I am good at working in a team and good at problem solving. I am very creative and like to follow my passions and my imagination";
+//     speed = 50;
+//
+// function typeWriter() {
+//     if (i < para1.length) {
+//         document.getElementById("paragraph1").innerHTML += para1.charAt(i);
+//         i++;
+//         setTimeout(typeWriter, speed);
+//     }
+// }
+//
+// window.onscroll = function() {myFunction()};
+//
+// function myFunction() {
+//     if (document.body.scrollTop > 750 || document.documentElement.scrollTop > 750) {
+//         typeWriter();
+//     }
+// }

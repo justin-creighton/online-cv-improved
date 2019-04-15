@@ -1,41 +1,90 @@
-
 // THIS IS THE STYLING FOR THE TOGGLE NAVBAR
 #menu-toggle-btn {
-    margin: 0.5rem;
     position: fixed;
-    top: 0;
-    left: 0;
-    padding: 0.1rem;
+    top: 1rem;
+    left: 1rem;
+    height: 2.4rem;
+    width: 2.8rem;
     z-index: 500;
     background: rgb(255, 255, 255);
     border-radius: 0.2rem;
+    transition: all 0.5s ease-in-out;
+
+    p {
+        background: grey;
+        border-radius: 1rem;
+        margin: 0;
+        left: 0.5rem;
+        position: absolute;
+        width: 1.8rem;
+        height: 0.3rem;
+        transition: all 0.5s ease-in-out;
+    }
+
+    p:nth-child(1){
+        top: 0.4rem;
+    }
+
+    p:nth-child(2) {
+        top: 1.05rem;
+    }
+
+    p:nth-child(3){
+        bottom: 0.4rem;
+    }
 }
 
-#menu-toggle-btn p {
-    padding: 0.1rem 0.8rem;
-    background: rgb(0, 0, 0);
-    margin: 0.3rem;
-    border-radius: 1rem;
+// THIS IS THE ANIMATION THAT PLAYS ONCE THE NAVBAR TOGGLE BUTTON IS CLICKED TO OPEN THE MENU
+@keyframes shift-open {
+    0% {
+        left: 0.5rem;
+    }
+
+    50% {
+        left: 6rem;
+    }
+
+    100% {
+        left: 0.3rem;
+    }
+}
+
+// THIS IS THE ANIMATION THAT PLAYS ONCE THE NAVBAR TOGGLE BUTTON IS CLICKED TO CLOSE THE MENU
+@keyframes shift-close {
+    0% {
+        left: 0.3rem;
+    }
+
+    50% {
+        left: 6rem;
+    }
+
+    100% {
+        left: 0.5rem;
+    }
 }
 
 #menu-toggle-btn:hover {
     box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
-#menu-toggle-btn span {
-    color: rgb(255, 255, 255);
-    position: absolute;
-    margin-top: 0.2rem;
-    font-size: 0.9rem;
-    font-family: "Poiret One";
-    left: 0;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
+// #menu-toggle-btn {
+//
+//     span {
+//         color: rgb(255, 255, 255);
+//         position: absolute;
+//         margin-top: 0.2rem;
+//         font-size: 0.9rem;
+//         font-family: "Poiret One";
+//         left: 0;
+//         opacity: 0;
+//         transition: opacity 0.3s ease-in-out;
+//     }
+// }
 
-#menu-toggle-btn:hover span {
-    opacity: 1;
-}
+// #menu-toggle-btn:hover span {
+//     opacity: 1;
+// }
 
 // THESE ARE THE STYLES FOR THE HEADING AND MAIN TITLE
 .head {
@@ -55,30 +104,59 @@
 }
 
 // THIS IS THE STYLES FOR THE ABOUT SECTION
-.image img {
-    width: 100%;
-    height: 100%;
-}
+.about {
+    margin: auto;
+    width: calc(100% - 10rem);
+    height: 100vh;
 
-.intro {
-    font-family: "Poiret One";
-    color: $text-color-1;
-    font-size: 1.2rem;
+    .image {
+        height: 21rem;
+        margin-top: 10rem;
+        padding-right: 1rem;
+        border-radius: 50%;
+
+        img {
+            width: 20rem;
+            height: 100%;
+            float: right;
+        }
+    }
+
+    .intro {
+        font-family: "Poiret One";
+        color: $text-color-1;
+        font-size: 1.2rem;
+        margin-top: 10rem;
+        height: 20rem;
+        padding: 0 4rem 1rem 4rem;
+    }
 }
 
 // THIS IS THE STYLES FOR THE EDUCATION SECTION
 #edu {
+    letter-spacing: 0.1rem;
+    color: $text-color-1;
+    margin: 2rem auto;
+    width: calc(100% - 10rem);
 
     h2,
     h3 {
         font-family: "Poiret One";
         padding: 0.2rem 0;
         font-size: 1.8rem;
+        white-space: nowrap;
     }
 
     .title {
-        text-align: center;
-        font-family: "Poiret One";
+
+        h2 {
+            color: rgb(82, 82, 82);
+            font-family: "Poiret One";
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.1rem;
+            font-size: 4rem;
+            text-align: center;
+        }
     }
 
     .card-1 {
@@ -106,17 +184,19 @@
 // THIS IS THE STYLES FOR THE PORTFOLIO SECTION
 .projects {
     margin: auto;
+    width: calc(100% - 16rem);
     perspective: 1100px;
     text-align: center;
-    padding: 4rem 6rem 14rem 6rem;
+    padding: 4rem 3rem 10rem 3rem;
     background: url(../images/road.jpg);
     background-size: 100% 100%;
 
-    h1 {
+    h2 {
         color: rgb(82, 82, 82);
         font-family: "Poiret One";
+        text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
         letter-spacing: 0.1rem;
-        font-size: 3rem;
+        font-size: 4rem;
         grid-column: -1/1;
     }
 
@@ -127,8 +207,9 @@
 
     .project-item {
       height: 16rem;
-      width: 100%;
+      width: 80%;
       position: relative;
+      margin: auto;
 
         .rotatingBox {
             height: 100%;
@@ -197,7 +278,7 @@
                     color: rgb(255, 255, 255);
                     font-family: "Poiret One";
                     letter-spacing: 0.1rem;
-                    font-size: 2rem;
+                    font-size: 1.4rem;
                     margin: 4rem 0 2rem 0;
                 }
 
@@ -212,7 +293,10 @@
                     color: rgb(255, 255, 255);
                     text-decoration: none;
                     font-family: "Dosis";
-                    position: relative;
+                    position: absolute;
+                    bottom: 1rem;
+                    left: 50%;
+                    transform: translateX(-50%);
                     padding: 0.5rem 1rem;
                     background: rgb(147, 119, 119);
                     transition: all 0.2s ease-in-out;
@@ -227,7 +311,7 @@
         .rotatingBox::before {
             content: "";
             position: absolute;
-            transform: rotateX(90deg) translateY(1rem);
+            transform: rotateX(90deg) translateY(2rem);
             transform-origin: bottom;
             height: 4rem;
             left: 0;
@@ -235,12 +319,13 @@
             bottom: -2rem;
             background: rgba(0, 0, 0, 0.8);
             transform-style: preserve-3d;
+            transition: all 0.5s ease-in-out;
         }
     }
 
     .project-item:hover .rotatingBox {
         transform: rotateY(180deg) translateY(0);
-        transition: all 1.5s ease-in-out;
+        transition: all 1s ease-in-out;
     }
 }
 

@@ -12,7 +12,7 @@
 
     <!-- TOGGLE NAVBAR -->
     <nav id="navbar">
-        <div class="links">
+        <div class="links turn">
             <span class="front-wall"><i class="fas fa-home"></i></span>
             <span class="back-wall"></span>
             <span class="left-wall"></span>
@@ -20,7 +20,7 @@
             <span class="top-wall"></span>
             <span class="bottom-wall"></span>
         </div>
-        <div class="links">
+        <div class="links turn">
             <span class="front-wall"><i class="fas fa-info-circle"></i></span>
             <span class="back-wall"></span>
             <span class="left-wall"></span>
@@ -28,7 +28,7 @@
             <span class="top-wall"></span>
             <span class="bottom-wall"></span>
         </div>
-        <div class="links">
+        <div class="links turn">
             <span class="front-wall"><i class="fas fa-graduation-cap"></i></span>
             <span class="back-wall"></span>
             <span class="left-wall"></span>
@@ -36,7 +36,7 @@
             <span class="top-wall"></span>
             <span class="bottom-wall"></span>
         </div>
-        <div class="links">
+        <div class="links turn">
             <span class="front-wall"><i class="fas fa-folder-open"></i></span>
             <span class="back-wall"></span>
             <span class="left-wall"></span>
@@ -51,11 +51,10 @@
         <!-- THIS IS THE HEADER -->
         <header id="home">
             <!-- MENU TOGGLE BUTTON -->
-            <div id="menu-toggle-btn" onclick="navBtn()">
-                <p></p>
-                <p></p>
-                <p></p>
-                <span>MENU</span>
+            <div id="menu-toggle-btn" onclick="navBtn(), spinAnimation()">
+                <p class="spin"></p>
+                <p class="spin"></p>
+                <p class="spin"></p>
             </div>
             <div class="head">
                 <h1 class="main-title">Justin Creighton</h1>
@@ -85,7 +84,6 @@
                     <h2 class="text-2">GUITARIST</h2>
                     <h2 class="text-3">ARTIST</h2>
                 </div>
-                <!-- <h2 class="main-heading">Junior Web Developer</h2> -->
             </div>
 
             <!-- THIS IS THE CONTACT INFORATION -->
@@ -123,22 +121,22 @@
         <!-- THIS IS THE INTRO -->
         <section id="about" class="about">
             <div class="image">
-                <img src="images/IMG_20160312_142854_edit.jpg" alt="">
+                <img src="images/cv-justin.jpg" alt="">
             </div>
             <div class="intro">
                 <h3>Who Am I ?</h3>
-                <p id="paragraph1"></p>
-                <p id="paragraph2"></p>
+                <p id="paragraph1">I am a hardworking individual who likes challenges, because I believe it allows us to discover new things and reach greater heights. I enjoy working within a team, especially a diverse one, because it allows you to come up with more ideas quicker and one receives ideas from differt persecptives.</p>
+                <p id="paragraph2">Technology has has intreeged me for as long as I can remember and I am always looking for the latest trends and descoveries in the tech industry. I am good at problem solving and inovative. I am very creative and I like to follow my passions and my imagination</p>
             </div>
         </section>
 
-        <div class="parralax-1"></div>
-
+        <!-- THIS IS THE BACKGROUND AFTER THE ABOUT SECTION -->
+        <div class="parralax-1 spacer"></div>
 
         <!-- EDUCATIONAL INFORMATION -->
         <div id="edu">
             <div class="title">
-                <h1>EDUCATIONAL INFORMATION</h1>
+                <h2>EDUCATION</h2>
             </div>
             <div class="card-1">
                 <h2>Secondary Education</h2>
@@ -168,10 +166,11 @@
             </div>
         </div>
 
-        <div class="parralax-2"></div>
+        <!-- THIS IS THE BACKGROUND AFTER THE EDUCATION SECTION -->
+        <div class="parralax-2 spacer"></div>
 
         <article id="portfolio" class="projects">
-            <h1>PORTFOLIO</h1>
+            <h2>PORTFOLIO</h2>
             <div class="project-item">
                 <div class="rotatingBox">
                     <div class="imgBox">
@@ -264,9 +263,23 @@
         </main> -->
 
         <footer>
-            <p>All Rights Reserved &copy;Justin Creighton SCD</p>
+            <div class="personal-details">
+                <h6>CONTACT INFO</h6>
+                <p><i class="fas fa-phone"></i>0844705809</p>
+                <p><i class="far fa-envelope"></i>soulcali789@gmail.com</p>
+            </div>
+            <div class="project-links">
+                <h6>PROJECTS</h6>
+                <p><a href="https://justinerenjaeger.github.io/outdoor-adventures/" target="_blank">Outdoor Adventures</a></p>
+                <p><a href="https://justinerenjaeger.github.io/fashion-shop/index.html" target="_blank">NateB</a></p>
+                <p><a href="http://artack-art-blog.7e14.starter-us-west-2.openshiftapps.com/" target="_blank">Antartica</a></p>
+            </div>
         </footer>
+        <div class="designer">
+            <p>DESIGNED BY JUSTIN CREIGHTON SCD &copy;2019</p>
+        </div>
     </div>
     <script src="js/main.js"></script>
+    <script src="js/nav-btn-animation.js"></script>
 </body>
 </html>

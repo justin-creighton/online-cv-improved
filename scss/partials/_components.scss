@@ -141,12 +141,22 @@
     transition: all .3s ease-in-out 0.4s;
 }
 
-// THIS IS THE FIRST PARRALAX
-.parralax-1 {
+.spacer {
     margin: auto;
     width: calc(100% - 10rem);
     height: 15rem;
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/heading.jpg);
+}
+// THIS IS THE FIRST PARRALAX
+.parralax-1 {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/backlit-blogging-business-34153.jpg);
     background-size: cover;
     background-attachment: fixed;
+}
+
+// THIS IS THE FIRST PARRALAX
+.parralax-2 {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/bass-guitar-chord-close-up-96380.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 6rem;
 }

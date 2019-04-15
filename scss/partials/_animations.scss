@@ -331,7 +331,8 @@
             font-size: 2rem;
             letter-spacing: 0.2rem;
             position: absolute;
-            top: 16%;
+            top: 50%;
+            margin: 0;
             text-align: center;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -450,7 +451,7 @@
     }
 }
 
-// THIS IS THE ANIMATION FOR THE BORDER AROUND THE FASE IN TEXT
+// THIS IS THE ANIMATION FOR THE BORDER AROUND THE FADE IN TEXT
 .top {
     top: 0;
     left: 0;
@@ -464,7 +465,7 @@
     right: 0;
     width: 0.2rem;
     height: 0;
-    animation: right 1s linear forwards 2s;
+    animation: right 0.5s linear forwards 2s;
 }
 
 .bottom {
@@ -472,7 +473,7 @@
     right: 0;
     width: 0;
     height: 0.2rem;
-    animation: bottom 2s linear forwards 3s;
+    animation: bottom 2s linear forwards 2.5s;
 }
 
 .left {
@@ -480,7 +481,7 @@
     left: 0;
     width: 0.2rem;
     height: 0;
-    animation: left 1s linear forwards 5s;
+    animation: left 0.5s linear forwards 4.5s;
 }
 
 @keyframes top {
@@ -517,7 +518,7 @@
     from {
         height: 0;
     }
-    
+
     to {
         height: 100%;
     }
