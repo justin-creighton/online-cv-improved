@@ -36,6 +36,16 @@
     grid-area: card-2;
 }
 
+// THIS IS THE SECTION FOR THE PROGRAMMING LANGUAGES
+.language-section {
+
+    .language-icons {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
 // THIS IS THE STYLES FOR THE PORTFOLIO SECTION
 .projects {
     display: grid;
