@@ -740,12 +740,16 @@ footer {
   .about .image {
     height: 21rem;
     margin-top: 10rem;
-    padding-right: 1rem;
-    border-radius: 50%; }
-    .about .image img {
-      width: 20rem;
+    padding-right: 1rem; }
+    .about .image .imgContainer {
+      width: 21rem;
       height: 100%;
-      float: right; }
+      border-radius: 50%;
+      float: right;
+      overflow: hidden; }
+      .about .image .imgContainer img {
+        width: 100%;
+        height: 100%; }
   .about .intro {
     font-family: "Poiret One";
     color: #424242;
@@ -776,7 +780,8 @@ footer {
     padding: 1rem 6rem; }
     #edu .card-1 ul li {
       margin: 0.5rem 0;
-      list-style-type: circle; }
+      list-style-type: circle;
+      font-family: "Dosis"; }
     #edu .card-1 img {
       width: 6rem; }
   #edu .card-2 {
@@ -1026,13 +1031,17 @@ footer {
     height: 30rem; }
     .about .image {
       margin-top: 4rem;
-      border-radius: 50%;
-      overflow: hidden;
-      padding: 0; }
-      .about .image img {
+      padding: 0;
+      height: 21rem; }
+      .about .image .imgContainer {
         width: 21rem;
-        float: left;
-        transform: scaleX(1.1); }
+        height: 100%;
+        border-radius: 50%;
+        float: right;
+        overflow: hidden; }
+        .about .image .imgContainer img {
+          width: 100%;
+          height: 100%; }
     .about .intro {
       font-size: 1rem;
       margin-top: 6rem;
@@ -1194,13 +1203,14 @@ footer {
         padding: 0.2rem 0; } }
 @media only screen and (max-width: 426px) {
   header {
-    background-size: cover !important; }
+    background-size: cover !important;
+    height: 100vh; }
 
   .head {
     padding-top: 14rem;
     font-size: 1.6rem; }
     .head .main-title {
-      font-size: 3rem; }
+      font-size: 2.4rem !important; }
     .head div {
       margin-top: 1rem;
       transform: translateX(-50%);
@@ -1211,7 +1221,8 @@ footer {
         font-size: 1.2rem; }
 
   .contact-info {
-    grid-template-columns: repeat(3, 1fr); }
+    grid-template-columns: repeat(3, 1fr);
+    top: 70%; }
 
   .holder {
     width: 8rem;
@@ -1249,13 +1260,19 @@ footer {
     width: calc(100% - 2rem);
     margin-bottom: 2rem; }
     .about .image {
-      height: 16rem;
+      height: 21rem;
       padding-right: 0;
-      width: 16rem;
+      width: 21rem;
       margin: 2rem auto 2 auto; }
-      .about .image img {
+      .about .image .imgContainer {
         width: 100%;
-        height: 100%; }
+        height: 100%;
+        border-radius: 50%;
+        float: right;
+        overflow: hidden; }
+        .about .image .imgContainer img {
+          width: 100%;
+          height: 100%; }
     .about .intro {
       margin-top: 0;
       padding: 0.5rem 0 !important;
@@ -1351,7 +1368,8 @@ footer {
         padding: 0.2rem 0; } }
 @media only screen and (max-width: 376px) {
   header {
-    background-size: cover !important; }
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../images/american-cellphone-coffee-1391371.jpg);
+    background-size: cover; }
 
   .head {
     padding-top: 14rem;
