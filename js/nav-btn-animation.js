@@ -4,6 +4,7 @@ let navBarAnim = 1;
 let spinAnimation = function() {
     let stripes = document.querySelectorAll(".spin");
         menuBtn = document.querySelector("#menu-toggle-btn");
+
     if(navBarAnim === 1){
         for(let i = 0; i < stripes.length; i++){
           stripes[0].style.transform = "rotateZ(405deg)";
