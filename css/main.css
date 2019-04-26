@@ -855,10 +855,10 @@ footer {
 
 .projects {
   margin: auto;
-  width: calc(100% - 16rem);
+  width: calc(100% - 10rem);
   perspective: 1100px;
   text-align: center;
-  padding: 4rem 3rem 10rem 3rem;
+  padding: 4rem 0 10rem 0;
   background: url(../images/road.jpg);
   background-size: 100% 100%; }
   .projects h2 {
@@ -872,7 +872,7 @@ footer {
     position: absolute; }
   .projects .project-item {
     height: 16rem;
-    width: 80%;
+    width: 70%;
     position: relative;
     margin: auto; }
     .projects .project-item .rotatingBox {
@@ -932,7 +932,8 @@ footer {
           color: white;
           font-family: "Poiret One";
           letter-spacing: 0.1rem;
-          padding-bottom: 2rem; }
+          padding-bottom: 2rem;
+          padding: 0 1rem 2rem 1rem; }
         .projects .project-item .rotatingBox .details a {
           color: white;
           text-decoration: none;
@@ -1059,7 +1060,7 @@ footer {
 
 .projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(2, 1fr); }
 
 .gallery {
   display: grid;
@@ -1159,7 +1160,7 @@ footer {
     padding: 2rem 3rem 10rem 3rem; }
     .projects .project-item {
       height: 12rem;
-      width: 90%; }
+      width: 80%; }
       .projects .project-item .rotatingBox .details h6 {
         font-family: "Dosis";
         font-size: 1rem;
@@ -1316,8 +1317,9 @@ footer {
         padding: 0.2rem 0; } }
 @media only screen and (max-width: 426px) {
   header {
-    background-size: cover !important;
-    height: 100vh; }
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../images/header-img-mobile.jpg);
+    background-size: 100% 100% !important;
+    height: 36rem; }
 
   .head {
     padding-top: 14rem;
@@ -1530,8 +1532,7 @@ footer {
         padding: 0.2rem 0; } }
 @media only screen and (max-width: 376px) {
   header {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../images/american-cellphone-coffee-1391371.jpg);
-    background-size: cover; }
+    height: 34rem; }
 
   .head {
     padding-top: 14rem;
@@ -1544,6 +1545,10 @@ footer {
       width: 80% !important; }
       .head div h2 {
         font-size: 1.2rem !important; }
+
+  #menu-toggle-btn {
+    left: initial;
+    right: 1rem; }
 
   .about {
     height: 38rem;

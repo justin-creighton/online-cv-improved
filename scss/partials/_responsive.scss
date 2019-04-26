@@ -146,7 +146,7 @@
 
         .project-item {
           height: 12rem;
-          width: 90%;
+          width: 80%;
 
             .rotatingBox {
 
@@ -440,8 +440,9 @@
 
     // THIS IS THE STYLES FOR THE HEADER
     header {
-        background-size: cover !important;
-        height: 100vh;
+        background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../images/header-img-mobile.jpg);
+        background-size: 100% 100% !important;
+        height: 36rem;
     }
 
     .head {
@@ -769,8 +770,7 @@
 @media only screen and (max-width: 376px) {
     // THIS IS THE STYLES FOR THE HEADER
     header {
-        background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../images/american-cellphone-coffee-1391371.jpg);
-        background-size: cover;
+        height: 34rem;
     }
 
     .head {
@@ -790,6 +790,11 @@
                 font-size: 1.2rem !important;
             }
         }
+    }
+
+    #menu-toggle-btn {
+        left: initial;
+        right: 1rem;
     }
 
     // THIS IS THE STYLES FOR THE ABOUT SECTION

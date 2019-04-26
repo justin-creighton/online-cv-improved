@@ -276,10 +276,10 @@
 // THIS IS THE STYLES FOR THE PORTFOLIO SECTION
 .projects {
     margin: auto;
-    width: calc(100% - 16rem);
+    width: calc(100% - 10rem);
     perspective: 1100px;
     text-align: center;
-    padding: 4rem 3rem 10rem 3rem;
+    padding: 4rem 0 10rem 0;
     background: url(../images/road.jpg);
     background-size: 100% 100%;
 
@@ -298,7 +298,7 @@
 
     .project-item {
       height: 16rem;
-      width: 80%;
+      width: 70%;
       position: relative;
       margin: auto;
 
@@ -378,6 +378,7 @@
                     font-family: "Poiret One";
                     letter-spacing: 0.1rem;
                     padding-bottom: 2rem;
+                    padding: 0 1rem 2rem 1rem;
                 }
 
                 a {
