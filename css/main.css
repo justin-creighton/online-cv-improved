@@ -993,39 +993,36 @@ footer {
   width: 100%;
   height: 100%;
   position: fixed;
-  left: -90rem;
+  left: 0;
   top: 0;
-  background: black;
-  overflow-y: scroll;
-  display: none;
+  background: rgba(0, 0, 0, 0.918);
   transition: left 1s ease-in-out;
   z-index: 6000; }
-  .gallery div {
-    width: 100%;
-    height: auto;
-    background: rgba(0, 0, 0, 0.9);
-    grid-column: span 2;
-    overflow: hidden; }
-    .gallery div img {
-      width: 100%;
-      height: 100%;
-      transform: scale(1.1); }
-  .gallery .img3 {
-    grid-column: span 2;
-    grid-row: span 2;
-    height: auto; }
-  .gallery .img6 {
-    grid-column: span 4;
-    grid-row: span 2;
-    height: auto; }
-  .gallery .img14 {
-    grid-column: span 2;
-    grid-row: span 2;
-    height: auto; }
-  .gallery .img12 {
-    grid-column: span 2;
-    grid-row: span 2;
-    height: auto; }
+  .gallery .img-holder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 90%; }
+    .gallery .img-holder .prev,
+    .gallery .img-holder .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 3rem;
+      height: 3rem; }
+    .gallery .img-holder .prev {
+      left: 0; }
+    .gallery .img-holder .next {
+      right: 0; }
+    .gallery .img-holder .galleryImage {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 50%;
+      height: auto; }
 
 .about {
   display: grid;
